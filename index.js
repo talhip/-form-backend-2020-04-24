@@ -13,9 +13,9 @@ const mailgun = require("mailgun-js")({
   domain: process.env.MAILGUN_DOMAIN,
 });
 
-// app.get("/", (req, res) => {
-//   res.send("Server is up!");
-// });
+app.get("/", (req, res) => {
+  res.send("Server is up!");
+});
 
 app.post("/", (req, res) => {
   const { firstname, lastname, email, subject, message } = req.fields;
